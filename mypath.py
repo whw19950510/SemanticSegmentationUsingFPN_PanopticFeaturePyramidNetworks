@@ -9,7 +9,7 @@ class Path(object):
             return '/path/to/datasets/benchmark_RELEASE/'
         elif dataset == 'cityscapes':
             # foler that contains leftImg8bit/
-            return 'D:\\Disk\\MidTerm\\Experiment\\Code\\Semantic\\FPN\\FPN\\data\\Cityscapes'
+            return '/home/hwang665/SemanticSegmentationUsingFPN_PanopticFeaturePyramidNetworks/data/Cityscapes'
         elif dataset == 'coco':
             return '/path/to/datasets/coco/'
         elif dataset == 'Camvid':

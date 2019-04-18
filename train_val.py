@@ -60,7 +60,7 @@ def parse_args():
 					    default=0, type=int)
     # cuda
     parser.add_argument('--cuda', dest='cuda',
-                      help='whether use CUDA'
+                      help='whether use CUDA',
                       default=True, type=bool)
     # multiple GPUs
     parser.add_argument('--mGPUs', dest='mGPUs', type=bool,
@@ -199,8 +199,8 @@ class Trainer(object):
             kwargs = {'num_workers': args.num_workers, 'pin_memory': True}
             self.train_loader, self.val_loader, self.test_loader, self.num_class = make_data_loader(args, **kwargs)
         elif args.dataset == 'NYUDv2':
-        kwargs = {'num_workers': args.num_workers, 'pin_memory': True}
-        self.train_loader, self.val_loader, self.num_class = make_data_loader(args, **kwargs)
+            kwargs = {'num_workers': args.num_workers, 'pin_memory': True}
+            self.train_loader, self.val_loader, self.num_class = make_data_loader(args, **kwargs)
 
         # Define network
         if args.net == 'resnet101':
